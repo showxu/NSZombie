@@ -1,9 +1,18 @@
 # NSZombie
 
-Apple's NSZombie implementation.
+NSZombie implementation for **Instruments Zombies**.
 
-## Install
+## Installation
 
 ### SPM
 
+```swift
+dependencies: [
+    .package(
+      url: "https://github.com/0xxd0/NSZombie", .upToNextMajor(from: "0.1.0")
+    )
+]
+```
+
 ## Usage
+
