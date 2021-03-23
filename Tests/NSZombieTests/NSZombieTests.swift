@@ -3,7 +3,7 @@ import XCTest
 
 @objcMembers class TestClass: NSObject {
     
-    @objc dynamic func test() {
+    @objc dynamic func sprintf() {
         print(NSStringFromClass(TestClass.self))
     }
 }
@@ -14,8 +14,8 @@ final class NSZombieTests: XCTestCase {
         let exp = expectation(description: "Wait for dealloc.")
         DispatchQueue.main.async {
             let object = TestClass()
-            DispatchQueue.global(qos: .background).asyncAfter(deadline: DispatchTime.now() + 5) { [unowned object] in
-                object.test()
+            DispatchQueue.global(qos: .background).asyncAfter(deadline: DispatchTime.now() + 2) { [unowned object] in
+                object.sprintf()
                 exp.fulfill()
             }
         }

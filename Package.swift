@@ -9,7 +9,8 @@ let package = Package(
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "NSZombie",
-            targets: ["NSZombie"]),
+            targets: ["NSZombie"]
+        ),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -21,7 +22,7 @@ let package = Package(
         .target(
             name: "NSZombie",
             swiftSettings: [
-                .define("ENABLE_SOMETHING", .when(configuration: .release)),
+                .define("DEBUG", .when(configuration: .debug)),
             ],
             linkerSettings: [
                 .linkedLibrary("openssl", .when(platforms: [.linux])),

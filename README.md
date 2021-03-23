@@ -9,7 +9,7 @@ NSZombie implementation for **Instruments Zombies**.
 ```swift
 dependencies: [
     .package(
-      url: "https://github.com/0xxd0/NSZombie", .upToNextMajor(from: "0.1.0")
+        url: "https://github.com/0xxd0/NSZombie", .upToNextMajor(from: "0.1.0")
     )
 ]
 ```
